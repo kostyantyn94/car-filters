@@ -3,10 +3,7 @@ const API_BASE = process.env.NEXT_PUBLIC_API_BASE;
 import VehicleModels from "../../../components/VehicleModels";
 import {fetchModels} from "@/app/utils/api";
 
-interface Params {
-  makeId: string;
-  year: string;
-}
+type Params = Promise<{ makeId: string, year: string }>
 
 interface PageProps {
   params: Params

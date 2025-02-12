@@ -64,9 +64,7 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
-        run: NEXT_IGNORE_BUILD_ERRORS=true NEXTJS_IGNORE_ESLINT=true ${{ steps.detect-package-manager.outputs.runner }} next build
-        env:
-          NEXT_IGNORE_BUILD_ERRORS: "true"
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
