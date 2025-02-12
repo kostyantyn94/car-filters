@@ -10,7 +10,6 @@ Vehicle Finder is a web application built with Next.js that allows users to brow
 - **Filtering & Sorting**: Search for models and sort them by name or ID.
 - **Favorites**: Save favorite vehicle models for easy access.
 - **Model Details**: View additional information in a modal popup.
-- **Dark & Light Theme**: Switch between themes for better readability.
 
 ## Installation & Setup
 
