@@ -3,6 +3,14 @@ const API_BASE = process.env.NEXT_PUBLIC_API_BASE;
 import VehicleModels from "../../../components/VehicleModels";
 import {fetchModels} from "@/app/utils/api";
 
+interface Params {
+  makeId: string;
+  year: string;
+}
+
+interface PageProps {
+  params: Params
+}
 interface VehicleMake {
   MakeId: number;
 }
@@ -29,8 +37,8 @@ export async function generateStaticParams() {
   );
 }
 
-export default async function ResultPage({ params }: { params: { makeId: string; year: string } }) {
-  const { makeId, year } = await params;
+export default async function ResultPage({ params  }: PageProps) {
+  const { makeId, year } =  await params;
 
    const models: VehicleModel[] = await fetchModels(makeId, year)
 

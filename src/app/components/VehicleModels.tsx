@@ -70,7 +70,7 @@ export default function VehicleModels({ models }: { models: VehicleModel[] }) {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {sortedModels.map((model, index) => (
           <div
-            key={`${model.Model_ID}-${index}`} // Уникальный ключ
+            key={`${model.Model_ID}-${index}`}
             className="p-4 bg-white text-gray-900 border border-gray-300 rounded-lg shadow-md transition transform hover:scale-105 hover:shadow-lg cursor-pointer relative"
             onClick={() => setSelectedModel(model)}
           >
