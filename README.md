@@ -72,11 +72,6 @@ npm run build
 npm run start
 ```
 
-Or deploy directly to Vercel:
-```bash
-vercel
-```
-
 ## Contributing
 
 Contributions are welcome! Feel free to open an issue or submit a pull request.
